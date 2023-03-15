@@ -51,13 +51,16 @@ createApp({
         this.activeImage = index;      
     },
     autoplay() {
-        setInterval(this.goDown, 3000);
+        return clock = setInterval(this.goDown, 3000);
     },
     stopAutoplay(){
-        clearInterval(this.autoplay);
+        clearInterval(clock);
+    },
+    startAutoplay(){
+        this.autoplay();
     }
   },
-  beforeMount() {
+  mounted() {
     this.autoplay ();
 }
 }).mount('#app')
