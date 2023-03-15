@@ -48,7 +48,13 @@ createApp({
         } 
     },
     selectedThumb(index) {
-         this.activeImage = index;      
+        this.activeImage = index;      
+    },
+    autoplay() {
+        setInterval(this.goDown, 3000);
     }
-  }
+  },
+  beforeMount() {
+    this.autoplay ();
+}
 }).mount('#app')
