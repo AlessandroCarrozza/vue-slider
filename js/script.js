@@ -52,6 +52,9 @@ createApp({
     },
     autoplay() {
         setInterval(this.goDown, 3000);
+    },
+    stopAutoplay(){
+        clearInterval(this.autoplay);
     }
   },
   beforeMount() {
