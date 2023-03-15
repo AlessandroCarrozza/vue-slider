@@ -1,4 +1,5 @@
 
+
 const { createApp } = Vue
 
 createApp({
@@ -56,9 +57,6 @@ createApp({
     stopAutoplay(){
         clearInterval(clock);
     },
-    startAutoplay(){
-        this.autoplay();
-    }
   },
   mounted() {
     this.autoplay ();
