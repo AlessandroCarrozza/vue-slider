@@ -46,6 +46,9 @@ createApp({
         if (this.activeImage < 0) {
             this.activeImage = this.slides.length - 1;
         } 
+    },
+    selectedThumb(index) {
+         this.activeImage = index;      
     }
   }
 }).mount('#app')
