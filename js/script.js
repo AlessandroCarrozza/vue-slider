@@ -6,6 +6,7 @@ createApp({
   data() {
     return {
         activeImage: 0,
+        clock:"",
         slides: [
                 {
                     image: 'img/01.webp',
@@ -52,10 +53,11 @@ createApp({
         this.activeImage = index;      
     },
     autoplay() {
-        return clock = setInterval(this.goDown, 3000);
+        this.clock = setInterval(this.goDown, 3000);
+        return this.clock;
     },
     stopAutoplay(){
-        clearInterval(clock);
+        clearInterval(this.clock);
     },
   },
   mounted() {
