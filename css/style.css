@@ -35,12 +35,14 @@
 .thumbs {
     float: left;
     height: 300px;
+    width: 160px;
     background: #000;
     position: relative;
 }
 
 .thumb {
     height: calc((300px) / 5);
+    width: 100%;
     opacity: 0.5;
 }
 
@@ -55,7 +57,8 @@
     opacity: 1;
 }
 
-.prev, .next {
+.prev,
+.next {
     width: 20px;
     height: 20px;
     margin: 10px 0;

@@ -14,10 +14,10 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0" @mouseover="stopAutoplay" @mouseleave="autoplay">
+            <div class="slider-wrapper" @mouseover="stopAutoplay" @mouseleave="autoplay">
 
                 <div class="item">
-                    <img :src="slides[activeImage].image" :alt="'Poster ' + slides[activeImage].title"/>
+                    <img :src="slides[activeImage].image" :alt="'Poster ' + slides[activeImage].title" />
                     <div class="text">
                         <h3>{{slides[activeImage].title}}</h3>
                         <p>
@@ -29,8 +29,9 @@
                 <div class="thumbs">
                     <div class="prev" @click="goUp"></div>
                     <div class="next" @click="goDown"></div>
-                    <div class="thumb" v-for="(slide, index) in slides" :class="(activeImage == index)? 'active':'' " @click="selectedThumb(index)">
-                        <img :src="slide.image" :alt="'Thumb ' + slide.title"/>
+                    <div class="thumb" v-for="(slide, index) in slides" :class="(activeImage == index)? 'active':'' "
+                        @click="selectedThumb(index)">
+                        <img :src="slide.image" :alt="'Thumb ' + slide.title" />
                     </div>
                 </div>
 
